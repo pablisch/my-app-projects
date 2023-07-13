@@ -9,13 +9,6 @@ let focusSubheading;
 let focusPara1;
 let focusPara2;
 
-const space = 'space';
-const forest = 'forest';
-const stem = 'stem';
-const fsl = 'fsl';
-const furniture = 'furniture';
-const learn = 'learn';
-
 // hamburger consts
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.navlist');
@@ -87,55 +80,55 @@ document
     clearAllActive();
   });
 
-// FUNCTION - get FOCUS source from topic panel target
+// FUNCTION - get FOCUS source from topic panel target which panel is clicked
 function findFocusFromPanelLink(whichPanelLink) {
   let focusKey =
-    whichPanelLink == 'space'
-      ? space
-      : whichPanelLink == 'space2'
-      ? space
-      : whichPanelLink == 'forest'
-      ? forest
-      : whichPanelLink == 'forest2'
-      ? forest
-      : whichPanelLink == 'stem'
-      ? stem
-      : whichPanelLink == 'stem2'
-      ? stem
-      : whichPanelLink == 'fsl'
-      ? fsl
-      : whichPanelLink == 'fsl2'
-      ? fsl
-      : whichPanelLink == 'furniture'
-      ? furniture
-      : whichPanelLink == 'furniture2'
-      ? furniture
-      : whichPanelLink == 'learn'
-      ? learn
-      : whichPanelLink == 'learn2'
-      ? learn
-      : sheet;
+    whichPanelLink == 'panel-1-1'
+      ? 0
+      : whichPanelLink == 'panel-1-2'
+      ? 0
+      : whichPanelLink == 'panel-2-1'
+      ? 1
+      : whichPanelLink == 'panel-2-2'
+      ? 1
+      : whichPanelLink == 'panel-3-1'
+      ? 2
+      : whichPanelLink == 'panel-3-2'
+      ? 2
+      : whichPanelLink == 'panel-4-1'
+      ? 3
+      : whichPanelLink == 'panel-4-2'
+      ? 3
+      : whichPanelLink == 'panel-5-1'
+      ? 4
+      : whichPanelLink == 'panel-5-2'
+      ? 4
+      : whichPanelLink == 'panel-6-1'
+      ? 5
+      : whichPanelLink == 'panel-6-2'
+      ? 5
+      : 0;
   setFocusInfo(focusKey);
 }
 
 // FUNCTION - get vid source from nav link target
 function findFocusKeyFromNavLink(whichNavLink) {
   let focusKey =
-    whichNavLink == 'Edge of Space Explorer'
-      ? space
-      : whichNavLink == 'Forest Creator'
-      ? forest
-      : whichNavLink == 'Primary STEM and Computing Lead'
-      ? stem
-      : whichNavLink == 'Forest School Leader'
-      ? fsl
-      : whichNavLink == 'Furniture Craftsperson'
-      ? furniture
-      : whichNavLink == 'Lifelong Learner'
-      ? learn
-      : whichNavLink == 'Software Projects (coming soon)'
-      ? projects
-      : space;
+    whichNavLink == 'LUPO'
+      ? 0
+      : whichNavLink == 'FarceBook'
+      ? 1
+      : whichNavLink == 'Lair BnB'
+      ? 2
+      : whichNavLink == 'Knot Very Useful'
+      ? 3
+      : whichNavLink == 'Picture Pad'
+      ? 4
+      : whichNavLink == 'Chitter'
+      ? 5
+      : whichNavLink == 'More About Me'
+      ? 6
+      : 0;
   setFocusInfo(focusKey);
 }
 
@@ -143,18 +136,18 @@ function findFocusKeyFromNavLink(whichNavLink) {
 function setFocusInfo(focusKey) {
   console.log('focusKey is ' + focusKey);
 
-  if (focusKey === 'space') {
-    console.log('space is the place');
+  if (focusKey === 0) {
+    console.log('lupo');
     focusPageMessage =
-      'This video shows that moment that the payload reached the edge of space and the balloon burst, sending the payload hurtling back to Earth.';
+      'Click on the <span class="bold">TO TRAINS</span> icon to go to the main page.';
     focusUrl = 'https://www.youtube.com/embed/9Rz9ZmfYuqk?rel=0&autoplay=1';
-    focusHeading = 'Edge of Space Explorer';
-    focusSubheading = 'Subheading';
+    focusHeading = 'London Underground Phony Orchestra';
+    focusSubheading = 'Sonification and visualisation of the London Underground Tube network';
     focusPara1 =
-      'I was privileged to have the amazing oportunity of sending a Raspberry Pi computer to the edge of space attached to a high-altitude balloon as a primary school anniversary celebration project. The payload included a range of cameras programmed in python to record a mix of video and images and send live images back to Earth, a GPS unit to track the journey and transmitter to send back live telemetry of the flight.';
+      "<span class='bold'>Description:</span> A generative music app based on real-time arrivals of trains on the London Underground network using data from the TFL Unified API. Each tube line is assigned an instrument and each station assigned a different note. This was the final group engineering project on the Makers Software Development bootcamp. The app was designed and coded entirely from scratch as a group collaboration. It was designed and built in eight days by five students.";
     focusPara2 =
-      'On the ground, we chased the flight in a minibus, making live predictions about the landing site so we could quickly retrieve the payload as it came hurtling back to Earth and landed safely in a wheat field.';
-  } else if (focusKey === 'forest') {
+      "<span class='bold'>Technologies:</span> The app is primarily built in JavaScript using the React.js library. We relied heavily on tone.js for the audio side of things which was new to all in the group. We also learnt chart.js when we discovered an urgent need to visualise TFL's dubious data. We, of course used Git and GitHub throughout as well as Postman.";
+  } else if (focusKey === 1) {
     focusPageMessage =
       'Pan around the 360 degree view of March Wood including right up to the sky and down to the ground. This image was taken when March Wood was just a couple of years old.';
     focusUrl = 'https://pablisch.github.io/MarchWood/';
@@ -164,7 +157,7 @@ function setFocusInfo(focusKey) {
       'The greatest barrier to setting up Forest School at my primary school was the profound lack of trees so I planted a brand new baby woodland that become known as March Wood. There was no end of challenges including funds and resources, Immovable deadlines, the reality of how long natures take to grow what you want as well as how quickly it grows what you definitely do not want, and helping saplings survive the long, hot summer holidays when the school is closed.';
     focusPara2 =
       'It took passion, dedication and resilience, especially in the midst of the pandemic lockdowns, but March Wood has thrived, tiny saplings now tower over me and we have an amazing outdoor classroom for all the school to enjoy, not to mention and incredible legacy woodland.';
-  } else if (focusKey === 'stem') {
+  } else if (focusKey === 2) {
     focusPageMessage =
       'The robots we used were designed, built and programmed by the children that drove them.';
     focusUrl = 'https://www.youtube.com/embed/CG7WkIYNqQA?rel=0&autoplay=1';
@@ -174,16 +167,16 @@ function setFocusInfo(focusKey) {
       "I have been incredibly lucky to have had such a varied teaching career full of amazing projects and opportunities. I was tasked to create a STEM makers workshop for a Tottenham primary school and my first job was to design a series of 'WOW' projects to inspire the children and get them excited about STEM. We had huge amounts of fun and learning with water bottle rockets, effervescent cannons, wind-powered cars and balloon-popping robot wars.";
     focusPara2 =
       'Over the next couple of years we hosted multi-school STEM events and won every STEM competition and award that we enetered.';
-  } else if (focusKey === 'fsl') {
+  } else if (focusKey === 3) {
     focusPageMessage = 'Click on compressed image panels to expand them';
     focusUrl = 'https://pablisch.github.io/forest-school-images-expanding/';
-    focusHeading = 'Forest School Leader';
+    focusHeading = 'Knot Very Useful';
     focusSubheading = 'Subheading';
     focusPara1 =
       "I was aksed 'make Forest School happen' at my primary school and despite being way outside my knowledge or comfort zone, I was excited to take on this challenge and so started a four year journey of planning and implenting all aspects of Forest School including Hundreds of pages of risk and benefit assessments.";
     focusPara2 =
-      'It was a joy to train and work as a Forest School Leader helping our children learn a huge range of activities and skills chosen by them from bug hunts to tree planting, and knife whittling to fire lighting and campfire cooking. Such a privilege to be able to see them growth and develop and for some children, just find a reason to get up and come to school!';
-  } else if (focusKey === 'furniture') {
+      'It was a joy to train and work as a Knot Very Useful helping our children learn a huge range of activities and skills chosen by them from bug hunts to tree planting, and knife whittling to fire lighting and campfire cooking. Such a privilege to be able to see them growth and develop and for some children, just find a reason to get up and come to school!';
+  } else if (focusKey === 4) {
     focusPageMessage = 'Click on compressed image panels to expand them';
     focusUrl = 'https://pablisch.github.io/furniture-portfolio-expanding/';
     focusHeading = 'Furniture Designer & Maker';
@@ -192,7 +185,7 @@ function setFocusInfo(focusKey) {
       'Following a lifelong passion for making and crafts, I took a degree in Furniture Design and Craftsmanship on the renowned Buckinghamshire New University course in High Wycombe. Following a few years working in professional craft workshops making one-off pieces for clients such as David Linley and Lily Curtis, I spent a decade as a self-employed furniture maker on a range bespoke projects for lovely artists, musicians and other creatives, such as Nigel Godrich, Garth Jennings and Joby Talbot.';
     focusPara2 =
       'The urge to create has never left me and spills out into carving, book-binding, small sculptural pieces and into the digital world.';
-  } else if (focusKey === 'learn') {
+  } else if (focusKey === 5) {
     focusPageMessage = 'Hover over any image panel to expand it';
     focusUrl = 'https://pablisch.github.io/travel-images-picture-pad/';
     focusHeading = 'Lifelong Learning & Curiosity';
@@ -226,32 +219,32 @@ function loadFocusInfo() {
   window.scrollTo(0, document.body.scrollHeight); // scrolls to bottom of the page
 }
 
-// FUNCTION - get array index from panel target
+// FUNCTION - get array index from panel target when hovering over panel
 function indexfromPanel(panelHover) {
   let index =
-    panelHover == 'space'
+    panelHover == 'panel-1-1'
       ? 0
-      : panelHover == 'space2'
+      : panelHover == 'panel-1-2'
       ? 0
-      : panelHover == 'forest'
+      : panelHover == 'panel-2-1'
       ? 1
-      : panelHover == 'forest2'
+      : panelHover == 'panel-2-2'
       ? 1
-      : panelHover == 'stem'
+      : panelHover == 'panel-3-1'
       ? 2
-      : panelHover == 'stem2'
+      : panelHover == 'panel-3-2'
       ? 2
-      : panelHover == 'fsl'
+      : panelHover == 'panel-4-1'
       ? 3
-      : panelHover == 'fsl2'
+      : panelHover == 'panel-4-2'
       ? 3
-      : panelHover == 'furniture'
+      : panelHover == 'panel-5-1'
       ? 4
-      : panelHover == 'furniture2'
+      : panelHover == 'panel-5-2'
       ? 4
-      : panelHover == 'learn'
+      : panelHover == 'panel-6-1'
       ? 5
-      : panelHover == 'learn2'
+      : panelHover == 'panel-6-2'
       ? 5
       : 0;
   console.log(index);
@@ -261,19 +254,19 @@ function indexfromPanel(panelHover) {
 // FUNCTION - get array index from link target
 function indexfromLink(linkHover) {
   let index =
-    linkHover == 'Edge of Space Explorer'
+    linkHover == 'LUPO'
       ? 0
-      : linkHover == 'Forest Creator'
+      : linkHover == 'FarceBook'
       ? 1
-      : linkHover == 'Primary STEM and Computing Lead'
+      : linkHover == 'Lair BnB'
       ? 2
-      : linkHover == 'Forest School Leader'
+      : linkHover == 'Knot Very Useful'
       ? 3
-      : linkHover == 'Furniture Craftsperson'
+      : linkHover == 'Picture Pad'
       ? 4
-      : linkHover == 'Lifelong Learner'
+      : linkHover == 'Chitter'
       ? 5
-      : linkHover == 'Software Projects (coming soon)'
+      : linkHover == 'More About Me'
       ? 6
       : 0;
   activePanel(index);
