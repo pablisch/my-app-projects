@@ -16,8 +16,9 @@ Responsive Image gallery Style rules
   --overlayLight: rgba(255, 255, 255, 0.9);
   --overlayDarkText: rgba(43, 43, 44, 1);
   --labelLightText: rgb(255, 255, 255);
-  --labelDark: rgba(43, 43, 44, 0.75);
+  --labelDark: rgba(43, 43, 44, 0.85);
   --hamburgerMenu: rgba(230, 230, 230, 0.9);
+  --tech: rgba(255, 255, 255, 0.4);
 
   --light-pink: #f0b7b1;
 
@@ -43,8 +44,6 @@ Responsive Image gallery Style rules
 
 .bold {
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
 }
 
 .bold-btn {
@@ -296,20 +295,19 @@ nav img:hover ~ h1 {
 
 #focus-section {
   background-color: var(--green3b);
-  /* background-image: url('images/ropeBackground3.jpeg'); */
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
   padding: 40px 0 20px;
+  align-items: center;
 }
 
 .focus-container {
   /* containing all FOCUS elements on both sides */
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  /* align-items: start; */
   max-width: 90vw; /* USE SAME SETTING for .nav-containter, .gallery-container, .focus-container & .footer-container */
   padding: 0 20px; /* standard 20px side padding for all outer containers */
 }
@@ -318,6 +316,8 @@ nav img:hover ~ h1 {
   /* containing LEFT side TEXT title and para elements */
   flex: 1 1 150px;
   margin-right: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 #focus-heading {
@@ -329,6 +329,15 @@ nav img:hover ~ h1 {
 #focus-subheading {
   margin-bottom: 15px;
   font-size: 1.4rem;
+}
+
+#technologies {
+  background-color: var(--tech);
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 5px 4px var(--tech); /* offset-x | offset-y | blur-radius | spread-radius | color */
+  display: inline-flex;
+  margin: 0 auto 10px;
 }
 
 #focus-para-1,
@@ -368,7 +377,7 @@ nav img:hover ~ h1 {
   min-height: 20vh;
   border: 1px var(--labelDark) solid;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.6);
-  padding-bottom: calc(80%);
+  padding-bottom: calc(45%);
   transition: padding-bottom 1s ease;
 }
 .iframe-container iframe {
@@ -400,9 +409,21 @@ footer p {
 
 /* RESPONSIVE */
 
+@media (max-width: 2300px) {
+  .iframe-container {
+    padding-bottom: calc(50%);
+  }
+}
+
+@media (max-width: 2200px) {
+  .iframe-container {
+    padding-bottom: calc(60%);
+  }
+}
+
 @media (max-width: 1900px) {
   .iframe-container {
-    padding-bottom: calc(80%);
+    padding-bottom: calc(70%);
   }
   #focus-para-1,
   #focus-para-2 {
@@ -422,7 +443,7 @@ footer p {
 
 @media (max-width: 1600px) {
   .iframe-container {
-    padding-bottom: calc(60%);
+    padding-bottom: calc(90%);
   }
   #focus-para-1,
   #focus-para-2 {
@@ -432,13 +453,13 @@ footer p {
 
 @media (max-width: 1500px) {
   .iframe-container {
-    padding-bottom: calc(60%);
+    padding-bottom: calc(90%);
   }
 }
 
 @media (max-width: 1400px) {
   .iframe-container {
-    padding-bottom: calc(60%);
+    padding-bottom: calc(90%);
   }
   .navContainer {
     max-width: 100vw;
@@ -457,27 +478,34 @@ footer p {
 
 @media (max-width: 1250px) {
   .iframe-container {
-    padding-bottom: calc(80%);
+    padding-bottom: calc(60%);
+    width: 90vw;
+  }
+  .focus-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #focus-page-message {
+    margin: 20px 15px 8px;
+  }
+  #focus-heading,
+  #focus-para-1,
+  #focus-para-2 {
+    text-align: center;
+  }
+  #focus-para-1,
+  #focus-para-2 {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 1100px) {
-  .iframe-container {
-    padding-bottom: calc(75%);
-  }
-  .focus-frame {
-    flex: 3 1 150px;
-  }
-  #focus-para-1,
-  #focus-para-2 {
-    font-size: 0.9rem;
-  }
   nav h1 {
     display: none;
   }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 980px) { /* Initiate hamburger menu */
   nav h1 {
     display: block;
   }
@@ -523,32 +551,8 @@ footer p {
   }
 }
 
-@media (max-width: 900px) {
-  .focus-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .iframe-container {
-    padding-bottom: calc(55%);
-    width: 90vw;
-  }
-  #focus-page-message {
-    margin: 20px 15px 8px;
-  }
-  #focus-heading,
-  #focus-para-1,
-  #focus-para-2 {
-    text-align: center;
-  }
-  #focus-para-1,
-  #focus-para-2 {
-    font-size: 1rem;
-  }
-}
-
 @media (max-width: 650px) {
   .iframe-container {
-    padding-bottom: calc(55%);
     width: 95vw;
   }
 }

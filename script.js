@@ -140,7 +140,7 @@ function setFocusInfo(focusKey) {
     console.log('lupo');
     focusPageMessage =
       'Click on the <span class="bold">TO TRAINS</span> icon to go to the main page.';
-    focusUrl = 'https://www.youtube.com/embed/9Rz9ZmfYuqk?rel=0&autoplay=1';
+    focusUrl = 'https://lupo.onrender.com/';
     focusHeading = 'London Underground Phony Orchestra';
     focusSubheading = 'Sonification and visualisation of the London Underground Tube network';
     focusPara1 =
