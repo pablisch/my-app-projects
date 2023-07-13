@@ -7,6 +7,7 @@ let focusUrl;
 let focusHeading;
 let focusSubheading;
 let focusPara1;
+let focusTechBadges;
 let focusPara2;
 
 // hamburger consts
@@ -145,6 +146,7 @@ function setFocusInfo(focusKey) {
     focusSubheading = 'Sonification and visualisation of the London Underground Tube network';
     focusPara1 =
       "<span class='bold'>Description:</span> A generative music app based on real-time arrivals of trains on the London Underground network using data from the TFL Unified API. Each tube line is assigned an instrument and each station assigned a different note. This was the final group engineering project on the Makers Software Development bootcamp. The app was designed and coded entirely from scratch as a group collaboration. It was designed and built in eight days by five students.";
+    focusTechBadges = '<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="nodejs" width="40" height="40"/><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg" alt="npm" width="40" height="40"/><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html5" width="40" height="40"/><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css3" width="40" height="40"/><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jest/jest-plain.svg" alt="jest" width="40" height="40"/><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="git" width="40" height="40"/><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="github" width="40" height="40"/>'
     focusPara2 =
       "<span class='bold'>Technologies:</span> The app is primarily built in JavaScript using the React.js library. We relied heavily on tone.js for the audio side of things which was new to all in the group. We also learnt chart.js when we discovered an urgent need to visualise TFL's dubious data. We, of course used Git and GitHub throughout as well as Postman.";
   } else if (focusKey === 1) {
@@ -155,6 +157,7 @@ function setFocusInfo(focusKey) {
     focusSubheading = 'Subheading';
     focusPara1 =
       'The greatest barrier to setting up Forest School at my primary school was the profound lack of trees so I planted a brand new baby woodland that become known as March Wood. There was no end of challenges including funds and resources, Immovable deadlines, the reality of how long natures take to grow what you want as well as how quickly it grows what you definitely do not want, and helping saplings survive the long, hot summer holidays when the school is closed.';
+    focusTechBadges = '<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>'
     focusPara2 =
       'It took passion, dedication and resilience, especially in the midst of the pandemic lockdowns, but March Wood has thrived, tiny saplings now tower over me and we have an amazing outdoor classroom for all the school to enjoy, not to mention and incredible legacy woodland.';
   } else if (focusKey === 2) {
@@ -165,33 +168,37 @@ function setFocusInfo(focusKey) {
     focusSubheading = 'Subheading';
     focusPara1 =
       "I have been incredibly lucky to have had such a varied teaching career full of amazing projects and opportunities. I was tasked to create a STEM makers workshop for a Tottenham primary school and my first job was to design a series of 'WOW' projects to inspire the children and get them excited about STEM. We had huge amounts of fun and learning with water bottle rockets, effervescent cannons, wind-powered cars and balloon-popping robot wars.";
+    focusTechBadges = '<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>'
     focusPara2 =
       'Over the next couple of years we hosted multi-school STEM events and won every STEM competition and award that we enetered.';
   } else if (focusKey === 3) {
-    focusPageMessage = 'Click on compressed image panels to expand them';
-    focusUrl = 'https://pablisch.github.io/forest-school-images-expanding/';
+    focusPageMessage = 'Hover over a knot panel of navbar link to see details. Click on either to see a video of that knot or hitch.';
+    focusUrl = 'https://pablisch.github.io/knot-very-useful/';
     focusHeading = 'Knot Very Useful';
     focusSubheading = 'Subheading';
     focusPara1 =
       "I was aksed 'make Forest School happen' at my primary school and despite being way outside my knowledge or comfort zone, I was excited to take on this challenge and so started a four year journey of planning and implenting all aspects of Forest School including Hundreds of pages of risk and benefit assessments.";
+    focusTechBadges = '<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>'
     focusPara2 =
       'It was a joy to train and work as a Knot Very Useful helping our children learn a huge range of activities and skills chosen by them from bug hunts to tree planting, and knife whittling to fire lighting and campfire cooking. Such a privilege to be able to see them growth and develop and for some children, just find a reason to get up and come to school!';
   } else if (focusKey === 4) {
     focusPageMessage = 'Click on compressed image panels to expand them';
-    focusUrl = 'https://pablisch.github.io/furniture-portfolio-expanding/';
-    focusHeading = 'Furniture Designer & Maker';
+    focusUrl = 'https://pablisch.github.io/picture-pad-flex-morph/';
+    focusHeading = 'Picture Pad Flex Morph';
     focusSubheading = 'Subheading';
     focusPara1 =
       'Following a lifelong passion for making and crafts, I took a degree in Furniture Design and Craftsmanship on the renowned Buckinghamshire New University course in High Wycombe. Following a few years working in professional craft workshops making one-off pieces for clients such as David Linley and Lily Curtis, I spent a decade as a self-employed furniture maker on a range bespoke projects for lovely artists, musicians and other creatives, such as Nigel Godrich, Garth Jennings and Joby Talbot.';
+    focusTechBadges = '<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>'
     focusPara2 =
       'The urge to create has never left me and spills out into carving, book-binding, small sculptural pieces and into the digital world.';
   } else if (focusKey === 5) {
     focusPageMessage = 'Hover over any image panel to expand it';
     focusUrl = 'https://pablisch.github.io/travel-images-picture-pad/';
-    focusHeading = 'Lifelong Learning & Curiosity';
+    focusHeading = 'Chitter';
     focusSubheading = 'Subheading';
     focusPara1 =
       'I am naturally curious and have a deep love of learning whether that means learning something new or delving deeper into something current. I have a particular love of learning to do and to create whether it be a physical hands-on craft of software development. It always seems to hold true for me that the deeper you go, the more there is to find';
+      focusTechBadges = '<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>'
     focusPara2 =
       "Curiosity also leads me to places near and far. I love spending time in different places, with different places, being exposed to different cultures, foods and ways of being. I find it bizarrely intriguing to see the different way different cultures behave on the roads but I'm often happiest up a mountain breathing the fresh high-altitude air.";
   } else {
@@ -202,6 +209,7 @@ function setFocusInfo(focusKey) {
     focusSubheading = 'Subheading';
     focusPara1 =
       'I am naturally curious and have a deep love of learning whether that means learning something new or delving deeper into something current. I have a particular love of learning to do and to create whether it be a physical hands-on craft of software development. It always seems to hold true for me that the deeper you go, the more there is to find';
+      focusTechBadges = '<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>'
     focusPara2 =
       "Curiosity also leads me to places near and far. I love spending time in different places, with different places, being exposed to different cultures, foods and ways of being. I find it bizarrely intriguing to see the different way different cultures behave on the roads but I'm often happiest up a mountain breathing the fresh high-altitude air.";
   }
@@ -213,6 +221,7 @@ function loadFocusInfo() {
   document.querySelector('#focus-heading').innerHTML = focusHeading;
   document.querySelector('#focus-subheading').innerHTML = focusSubheading;
   document.querySelector('#focus-para-1').innerHTML = focusPara1;
+  document.querySelector('#technologies').innerHTML = focusTechBadges;
   document.querySelector('#focus-para-2').innerHTML = focusPara2;
   document.querySelector('#focus-page-message').innerHTML = focusPageMessage;
   document.querySelector('#focus-page').src = focusUrl; // #focusPage is the id of the iframe
