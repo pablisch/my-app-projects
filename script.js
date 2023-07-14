@@ -263,7 +263,7 @@ function indexfromPanel(panelHover) {
       : panelHover == 'panel-6-2'
       ? 5
       : 0;
-  console.log(index);
+  console.log(`panel #${index + 1}`);
   activePanel(index);
 }
 
@@ -272,7 +272,7 @@ function indexfromLink(linkHover) {
   let index =
     linkHover == 'LUPO'
       ? 0
-      : linkHover == 'FarceBook'
+      : linkHover == 'Farce Book'
       ? 1
       : linkHover == 'Lair BnB'
       ? 2
@@ -285,6 +285,7 @@ function indexfromLink(linkHover) {
       : linkHover == 'More About Me'
       ? 6
       : 0;
+  console.log(`navlink #${index + 1}`);
   activePanel(index);
 }
 
