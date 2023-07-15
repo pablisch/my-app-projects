@@ -4,6 +4,7 @@ function setFocusInfo(focusKey) {
 
   if (focusKey === 0) { // LUPO
     console.log('lupo');
+    focusRepo = 'https://github.com/pablisch/lupo'
     focusPageMessage =
       'Click on the <span class="bold">TO TRAINS</span> icon to go to the main page, then <span class="bold">tap in</span> to start your journey.';
     focusUrl = 'https://lupo.onrender.com/';
@@ -16,6 +17,7 @@ function setFocusInfo(focusKey) {
       "<span class='bold'>Technologies:</span> The app is primarily built in JavaScript using the React.js library. We relied heavily on tone.js for the audio side of things which was new to all in the group. We also learnt chart.js when we discovered an urgent need to visualise TFL's dubious data. We, of course used Git and GitHub throughout as well as Postman.";
     
   } else if (focusKey === 1) { // FarceBook
+    focusRepo = 'https://github.com/pablisch/farce-book'
     focusPageMessage =
       "As this is hosted on a free tier of <span class='bold'>Render</span>, the backend may take up to 30 seconds to spin up. The app will not work until the backend is running. Please be patient";
     focusUrl = 'https://farcebook-9uwa.onrender.com/';
@@ -28,6 +30,7 @@ function setFocusInfo(focusKey) {
       "<span class='bold'>Technologies:</span> The app is built on a seed MERN stack codebase. It uses JWT web tokens for authentication and authorization. The backend is built in Node.js using Express.js and MongoDB. The frontend is built in React.js. We used Jest for testing the backend and Cypress for testing the frontend using both component and end-to-end testing. We used Git and GitHub for version control and collaboration with PR reviews and main branch protection. We used Postman for testing the backend API."; 
     
   } else if (focusKey === 2) { // Lair BnB
+    focusRepo = 'https://github.com/pablisch/lair-bnb'
     focusPageMessage =
       '<span class="bold">Lair BnB</span> is <span class="bold">NOT</span> currently deployed online. Please see the <span class="bold">README</span> for instructions on how to run it locally.';
     focusUrl = 'https://pablisch.github.io/lair-bnb/';
@@ -40,6 +43,7 @@ function setFocusInfo(focusKey) {
     "<span class='bold'>Technologies:</span> The app is built from scratch in Ruby and ERB, using Sinatra for routing with the Rack web server interface. We used PostgreSQL relational database with three tables and one-to-many relationships. Apart from being our first group project, for much of the group it was a first venture into CSS which was not taught by Makers. We used RSpec for testing and achieved 100% coverage over 50 unit and integration tests. We used Git and GitHub for version control and Postman API testing.";
     
   } else if (focusKey === 3) { // Knot Very Useful
+    focusRepo = 'https://github.com/pablisch/knot-very-useful'
     focusPageMessage = 'Hover over a knot panel of navbar link to see details. Click on either to see a video of that knot or hitch.';
     focusUrl = 'https://pablisch.github.io/knot-very-useful/';
     focusHeading = 'Knot Very Useful';
@@ -51,6 +55,7 @@ function setFocusInfo(focusKey) {
       "<span class='bold'>Technologies:</span> This app was made six months before the Makers Software Development Bootcamp using vanilla JavaScript, HTML and CSS. It was a real challenge in learning new code techniques and combining them in a way that worked including making it fully responsive to be coherent on different screen sizes and orientations making it possible to use in the wild.";
     
   } else if (focusKey === 4) { // Picture Pad
+    focusRepo = 'https://github.com/pablisch/picture-pad-flex-morph'
     focusPageMessage = 'Click on compressed image panels to expand them';
     focusUrl = 'https://pablisch.github.io/picture-pad-flex-morph/';
     focusHeading = 'Picture Pad Flex Morph';
@@ -62,6 +67,7 @@ function setFocusInfo(focusKey) {
       "<span class='bold'>Technologies:</span> This app was made using vanilla JavaScript, HTML and CSS. It was a playful, early exploration of code and represented a real challenge at that time. Technically speaking, it was primarily an exploration of layout, Flexbox, Grid and DOM manipulation but it was also a lot of fun";
     
   } else if (focusKey === 5) { // Chitter
+    focusRepo = 'https://github.com/pablisch/chitter-challenge'
     focusPageMessage = '<span class="bold">Chitter</span> is deployed on a free tier of <span class="bold">Render</span> and may take up to 30 seconds to spin up. Please be patient. You may see an entirely different app until it is ready to load.';
     focusUrl = 'https://chitter-7pam.onrender.com/';
     focusHeading = 'Chitter';
@@ -73,6 +79,7 @@ function setFocusInfo(focusKey) {
       "<span class='bold'>Technologies:</span> This app is written in Ruby and ERB and uses Sinatra with the Rack web server interface. It uses a PostgreSQL relational database with two tables with a one-to-many relationship. A challenge for this project was using password encryption for the first time using bcrypt. I used RSpec for testing and Git and GitHub for version control. It is hosted on Render and is the first app with a GUI and database that I have deployed.";
     
   } else { // IF NO FOCUS KEY FOUND
+    focusRepo = 'https://github.com/pablisch/lupo'
     console.log('no focusKey found');
     focusPageMessage =
       'Click on the <span class="bold">TO TRAINS</span> icon to go to the main page.';

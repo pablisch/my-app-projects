@@ -10,6 +10,25 @@ let focusSubheading;
 let focusPara1;
 let focusTechBadges;
 let focusPara2;
+let focusRepo;
+
+// FUNCTION - openApp from button link at bottom of the page
+function openApp() {
+  if (!focusUrl) {
+    focusUrl = 'https://lupo.onrender.com/'
+  }
+  console.log('focusUrl = ' + focusUrl)
+  window.open(focusUrl);
+}
+
+// FUNCTION - openRepo from button link at bottom of the page
+function openRepo() {
+  if (!focusRepo) {
+    focusRepo = 'https://github.com/pablisch/lupo'
+  }
+  console.log('focusRepo = ' + focusRepo)
+  window.open(focusRepo);
+}
 
 // hamburger consts
 const hamburger = document.querySelector('.hamburger');
