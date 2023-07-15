@@ -297,16 +297,16 @@ nav img:hover ~ h1 {
   align-items: center;
   justify-content: center;
   padding: 40px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: center;
 }
 
-.short-text1 {
-  font-size: 1.3rem;
+.long-text-1 {
+  font-size: 1rem;
 }
 
-.short-text2 {
-  font-size: 1.5rem;
+.short-text-1 {
+  font-size: 1.2rem;
 }
 
 /* ACTIVE INFO PANELS */
