@@ -159,6 +159,18 @@ nav {
   color: var(--green1);
 }
 
+.github-link-btn {
+  background-color: var(--green1a);
+}
+
+.github-link-btn:hover {
+  background-color: #d7ffb0;
+}
+
+.github-link {
+  max-width: 60px;
+}
+
 .longlink1 {
   flex-basis: 80px;
 }
