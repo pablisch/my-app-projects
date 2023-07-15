@@ -121,11 +121,10 @@ nav {
   font-weight: bold;
 }
 
-.nav-link {
+.nav-btn {
   flex-basis: 60px;
   text-align: center;
   margin: 0 5px;
-  background-color: var(--green2b);
   border-radius: 15px;
   padding: 5px 4px;
   font-weight: bold;
@@ -133,8 +132,12 @@ nav {
   align-items: center;
   justify-content: center;
   min-width: 70px;
-  color: var(--navText);
   border: 1px var(--green3b) solid;
+}
+
+.nav-link {
+  background-color: var(--green2b);
+  color: var(--navText);
 }
 
 .nav-link:hover {
@@ -143,18 +146,8 @@ nav {
 }
 
 .external-nav-link {
-  flex-basis: 60px;
-  text-align: center;
   background-color: var(--green6);
-  border-radius: 15px;
-  padding: 5px 4px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 70px;
   color: var(--green2b);
-  border: 1px var(--green3b) solid;
   margin: 0 0 0 8px;
   text-decoration: none;
 }
@@ -578,9 +571,6 @@ footer p {
   .hamburger.active .burgerBar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-  .nav-link {
-    flex-basis: 40px;
-  }
   .navlist {
     position: fixed;
     top: -100%;
@@ -595,8 +585,9 @@ footer p {
     padding-top: 10px;
     opacity: 0;
   }
-  nav p {
-    margin: 16px 0;
+  .nav-btn {
+    margin: 2px 0;
+    flex-basis: 40px;
   }
   .navlist.active {
     left: 0;
