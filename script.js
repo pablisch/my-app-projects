@@ -2,7 +2,7 @@ const panelTopics = document.querySelectorAll('.overlay'); // all topic panels
 const panelTitles = document.querySelectorAll('.panel-label'); // all panel labels
 const navLinks = document.querySelectorAll('.nav-link'); // all nav links
 const midSection = document.querySelector('#gallery-section'); // for all active quirk
-const navbar = document.querySelector('#navbar'); // for sticky navbar
+const navbar = document.querySelector('#navbar'); // for nav colour transition
 
 
 let focusUrl;

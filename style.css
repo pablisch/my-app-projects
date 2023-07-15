@@ -215,10 +215,6 @@ nav li {
   color: #adfe2f;
 }
 
-.logo-image:hover ~ nav {
-  background-color: #68b0ab;
-}
-
 /* PANEL GALLERY */
 
 #gallery-section {
