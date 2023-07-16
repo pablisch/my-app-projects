@@ -164,7 +164,8 @@ nav {
 }
 
 .github-link-btn:hover {
-  background-color: #d7ffb0;
+  background-color: #b6fc4c;
+  border: 1px var(--navText2) solid;
 }
 
 .github-logo {
