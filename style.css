@@ -126,7 +126,7 @@ nav {
 .nav-btn {
   flex-basis: 60px;
   text-align: center;
-  margin: 0 5px;
+  margin: 0 4px; /* Any change made here should also be made to margin in .github-link-btn  */
   border-radius: 15px;
   padding: 5px 4px;
   font-weight: bold;
@@ -150,7 +150,6 @@ nav {
 .external-nav-link {
   background-color: var(--green6);
   color: var(--green2b);
-  margin: 0 0 0 8px;
   text-decoration: none;
 }
 
@@ -161,13 +160,14 @@ nav {
 
 .github-link-btn {
   background-color: var(--green1a);
+  margin: 0 0 0 4px;
 }
 
 .github-link-btn:hover {
   background-color: #d7ffb0;
 }
 
-.github-link {
+.github-logo {
   max-width: 60px;
 }
 
