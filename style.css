@@ -10,7 +10,7 @@ Responsive Image gallery Style rules
 :root {
   --navbar: rgba(230, 230, 230, 0.8);
   --navText: rgba(43, 43, 44, 0.7);
-  --navText2:rgba(17, 19, 17, 0.7);
+  --navText2:rgba(17, 19, 17, 0.8);
   --preOverlayLight: rgba(255, 255, 255, 0);
   --preOverlayDarkText: rgba(43, 43, 44, 0);
   --overlayLight: rgba(255, 255, 255, 0.9);
@@ -22,6 +22,7 @@ Responsive Image gallery Style rules
   --tech: rgba(255, 255, 255, 0.4);
 
   --light-pink: #f0b7b1;
+  --lime: #b6fc4c;
 
   /* colour palette from https://coolors.co/palette/ffa69e-faf3dd-b8f2e6-aed9e0-5e6472 */
   --pink: #ffa69e;
@@ -124,7 +125,7 @@ nav {
 }
 
 .nav-btn {
-  flex-basis: 60px;
+  flex: 0 0 20px;
   text-align: center;
   margin: 0 4px; /* Any change made here should also be made to margin in .github-link-btn  */
   border-radius: 15px;
@@ -154,8 +155,8 @@ nav {
 }
 
 .external-nav-link:hover {
-  background-color: rgba(33, 36, 33, 0.7);
-  color: var(--green1);
+  background-color: var(--navText2);
+  color: var(--lime);
 }
 
 .github-link-btn {
@@ -164,7 +165,7 @@ nav {
 }
 
 .github-link-btn:hover {
-  background-color: #b6fc4c;
+  background-color: var(--lime);
   border: 1px var(--navText2) solid;
 }
 
@@ -601,12 +602,15 @@ footer p {
   }
   .nav-btn {
     margin: 2px 0;
-    flex-basis: 40px;
+    flex: 1 1 40px;
   }
   .navlist.active {
     left: 0;
     top: 65px;
     opacity: 1;
+  }
+  .github-logo {
+    max-width: 25px;
   }
 }
 
