@@ -451,6 +451,12 @@ nav li {
   margin: 0 -6px;
 }
 
+#bottom-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* FOOTER */
 
 footer {
@@ -620,6 +626,19 @@ footer p {
   }
 }
 
+@media (max-width: 620px) {
+  #bottom-btns {
+    flex-direction: column;
+  }
+  .middle-btn {
+    margin: 10px auto;
+  }
+  .bottom-of-page-btn {
+    min-width: 100%;
+    padding: 8px 25px;
+  }
+}
+
 @media (max-width: 370px) {
   nav h1 {
     font-size: 1.4rem;
@@ -639,3 +658,4 @@ footer p {
     max-width: 40px;
   }
 }
+
