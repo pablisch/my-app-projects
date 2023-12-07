@@ -146,7 +146,7 @@ function findFocusKeyFromNavLink(whichNavLink) {
       ? 3
       : whichNavLink == 'Picture Pad'
       ? 4
-      : whichNavLink == 'Chitter'
+      : whichNavLink == 'Eclipse Layout'
       ? 5
       // : whichNavLink == 'More About Me'
       // ? 6
@@ -211,7 +211,7 @@ function indexfromLink(linkHover) {
       ? 3
       : linkHover == 'Picture Pad'
       ? 4
-      : linkHover == 'Chitter'
+      : linkHover == 'Eclipse Layout'
       ? 5
       : linkHover == 'More About Me'
       ? 6
