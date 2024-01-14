@@ -7,30 +7,16 @@ const navbar = document.querySelector('#navbar'); // for nav colour transition
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.navlist');
 
-let focusUrl;
-let focusHeading;
-let focusSubheading;
-let focusPara1;
-let focusTechBadges;
-let focusPara2;
-let focusRepo;
+let focusProject;
 
 // FUNCTION - openApp from button link at bottom of the page
 function openApp() {
-  if (!focusUrl) {
-    focusUrl = 'https://lupo.onrender.com/'
-  }
-  console.log('focusUrl = ' + focusUrl)
-  window.open(focusUrl);
+  window.open(focusProject?.focusUrl || 'https://lupo.onrender.com/');
 }
 
 // FUNCTION - openRepo from button link at bottom of the page
 function openRepo() {
-  if (!focusRepo) {
-    focusRepo = 'https://github.com/pablisch/lupo'
-  }
-  console.log('focusRepo = ' + focusRepo)
-  window.open(focusRepo);
+  window.open(focusProject?.focusRepo || 'https://github.com/pablisch/lupo');
 }
 
 // Listen for ENTER - go to top of page
@@ -103,57 +89,34 @@ document
 // FUNCTION - get FOCUS source from topic panel target which panel is clicked
 function findFocusFromPanelLink(whichPanelLink) {
   let focusKey =
-    whichPanelLink == 'panel-1-1'
-      ? 0
-      : whichPanelLink == 'panel-1-2'
-      ? 0
-      : whichPanelLink == 'panel-2-1'
-      ? 1
-      : whichPanelLink == 'panel-2-2'
-      ? 1
-      : whichPanelLink == 'panel-3-1'
-      ? 2
-      : whichPanelLink == 'panel-3-2'
-      ? 2
-      : whichPanelLink == 'panel-4-1'
-      ? 3
-      : whichPanelLink == 'panel-4-2'
-      ? 3
-      : whichPanelLink == 'panel-5-1'
-      ? 4
-      : whichPanelLink == 'panel-5-2'
-      ? 4
-      : whichPanelLink == 'panel-6-1'
-      ? 5
-      : whichPanelLink == 'panel-6-2'
-      ? 5
-      : 0;
+    whichPanelLink == 'panel-1-1' || whichPanelLink == 'panel-1-2' ? 0 :
+    whichPanelLink == 'panel-2-1' || whichPanelLink == 'panel-2-2' ? 1 :
+    whichPanelLink == 'panel-3-1' || whichPanelLink == 'panel-3-2' ? 2 :
+    whichPanelLink == 'panel-4-1' || whichPanelLink == 'panel-4-2' ? 3 :
+    whichPanelLink == 'panel-5-1' || whichPanelLink == 'panel-5-2' ? 4 :
+    whichPanelLink == 'panel-6-1' || whichPanelLink == 'panel-6-2' ? 5 :
+    0;
+
   setFocusInfo(focusKey);
 }
+
 
 // FUNCTION - get vid source from nav link target
 function findFocusKeyFromNavLink(whichNavLink) {
   let focusKey =
-    whichNavLink == projectData[0].navLinkLabel
-      ? 0
-      : whichNavLink == projectData[1].navLinkLabel
-      ? 1
-      : whichNavLink == projectData[2].navLinkLabel
-      ? 2
-      : whichNavLink == projectData[3].navLinkLabel
-      ? 3
-      : whichNavLink == projectData[4].navLinkLabel
-      ? 4
-      : whichNavLink == projectData[5].navLinkLabel
-      ? 5
-      : 0;
+    whichNavLink == projectData[0].navLinkLabel ? 0
+      : whichNavLink == projectData[1].navLinkLabel ? 1
+      : whichNavLink == projectData[2].navLinkLabel ? 2
+      : whichNavLink == projectData[3].navLinkLabel ? 3
+      : whichNavLink == projectData[4].navLinkLabel ? 4
+      : whichNavLink == projectData[5].navLinkLabel ? 5 : 0;
   setFocusInfo(focusKey);
 }
 
 function setFocusInfo(focusKey) {
   console.log('focusKey is ' + focusKey);
 
-  const focusProject =
+  focusProject =
     focusKey === 0 ? projectData[0] :
       focusKey === 1 ? projectData[1] :
         focusKey === 2 ? projectData[2] :
@@ -180,53 +143,29 @@ function loadFocusInfo(focusProject) {
 // FUNCTION - get array index from panel target when hovering over panel
 function indexfromPanel(panelHover) {
   let index =
-    panelHover == 'panel-1-1'
-      ? 0
-      : panelHover == 'panel-1-2'
-      ? 0
-      : panelHover == 'panel-2-1'
-      ? 1
-      : panelHover == 'panel-2-2'
-      ? 1
-      : panelHover == 'panel-3-1'
-      ? 2
-      : panelHover == 'panel-3-2'
-      ? 2
-      : panelHover == 'panel-4-1'
-      ? 3
-      : panelHover == 'panel-4-2'
-      ? 3
-      : panelHover == 'panel-5-1'
-      ? 4
-      : panelHover == 'panel-5-2'
-      ? 4
-      : panelHover == 'panel-6-1'
-      ? 5
-      : panelHover == 'panel-6-2'
-      ? 5
-      : 0;
+    panelHover == 'panel-1-1' || panelHover == 'panel-1-2' ? 0 :
+    panelHover == 'panel-2-1' || panelHover == 'panel-2-2' ? 1 :
+    panelHover == 'panel-3-1' || panelHover == 'panel-3-2' ? 2 :
+    panelHover == 'panel-4-1' || panelHover == 'panel-4-2' ? 3 :
+    panelHover == 'panel-5-1' || panelHover == 'panel-5-2' ? 4 :
+    panelHover == 'panel-6-1' || panelHover == 'panel-6-2' ? 5 :
+    0;
+
   console.log(`panel #${index + 1}`);
   activePanel(index);
 }
 
+
 // FUNCTION - get array index from link target
 function indexfromLink(linkHover) {
   let index =
-    linkHover == projectData[0].navLinkLabel
-      ? 0
-      : linkHover == projectData[1].navLinkLabel
-      ? 1
-      : linkHover == projectData[2].navLinkLabel
-      ? 2
-      : linkHover == projectData[3].navLinkLabel
-      ? 3
-      : linkHover == projectData[4].navLinkLabel
-      ? 4
-      : linkHover == projectData[5].navLinkLabel
-      ? 5
-      : linkHover == 'More About Me'
-      ? 6
-      : 0;
+    linkHover == projectData[0].navLinkLabel ? 0
+      : linkHover == projectData[1].navLinkLabel ? 1
+      : linkHover == projectData[2].navLinkLabel ? 2
+      : linkHover == projectData[3].navLinkLabel ? 3
+      : linkHover == projectData[4].navLinkLabel ? 4
+      : linkHover == projectData[5].navLinkLabel ? 5
+      : linkHover == 'More About Me' ? 6 : 0;
   console.log(`navlink #${index + 1}`);
   activePanel(index);
 }
