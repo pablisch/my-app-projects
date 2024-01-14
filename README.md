@@ -21,6 +21,29 @@ Hovering over either the knot tile or the navbar link will display a description
 Screenshot of the video window:
 ![video window](/images/readmeImages/knot-video.png)
 
+## Notes on changing the apps used within this app
+
+There are various places througout the app that will need editing to swap one of the showcased apps for a new one. This section will help to locate all the necessary changes.
+
+##### In index.html
+1. Navlink title (currently lines 29 to 34)
+2. App panel requires new image, title and description (e.g. app one is currently lines 61 to 69)
+3. **If** changing the primary app (currently LUPO) you would need to change the default app section (currently lines 132 to 157)
+
+##### In projectData.js
+ProjectData.js is a file containing an array of project data objects in the order that they appear. There should always be six uncommented objects.
+Place the new data object int he correct place, i.e. if it is the thrid panal and third navlink, place it as the third object, index 2.
+Make sure you have all data fields included.
+
+## Notes on re-ordering the apps used within this app
+
+Just re-ordering the apps takes quite a bit of editing in this current format. This section will guide you through that process... at least where it needs doing.
+
+##### In index.html
+1. Navlink titles (currently lines 29 to 34)
+2. App panel contains image, title and description (e.g. app one is currently lines 61 to 69)
+
+
 ## Technologies Used
 
 - Vanilla JavaScript
@@ -36,3 +59,5 @@ Knot descriptions when hovering over tiles of nav links:
 
 Selecting a knot and playing the video:
 ![knot selection and video](/images/readmeImages/knot-video.gif)
+
+
