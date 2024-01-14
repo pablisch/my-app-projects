@@ -3,7 +3,9 @@ const panelTitles = document.querySelectorAll('.panel-label'); // all panel labe
 const navLinks = document.querySelectorAll('.nav-link'); // all nav links
 const midSection = document.querySelector('#gallery-section'); // for all active quirk
 const navbar = document.querySelector('#navbar'); // for nav colour transition
-
+// hamburger consts
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.navlist');
 
 let focusUrl;
 let focusHeading;
@@ -30,10 +32,6 @@ function openRepo() {
   console.log('focusRepo = ' + focusRepo)
   window.open(focusRepo);
 }
-
-// hamburger consts
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.navlist');
 
 // Listen for ENTER - go to top of page
 document.addEventListener('keyup', function (event) {
@@ -136,33 +134,46 @@ function findFocusFromPanelLink(whichPanelLink) {
 // FUNCTION - get vid source from nav link target
 function findFocusKeyFromNavLink(whichNavLink) {
   let focusKey =
-    whichNavLink == 'LUPO'
+    whichNavLink == projectData[0].navLinkLabel
       ? 0
-      : whichNavLink == 'FarceBook'
+      : whichNavLink == projectData[1].navLinkLabel
       ? 1
-      : whichNavLink == 'Lair BnB'
+      : whichNavLink == projectData[2].navLinkLabel
       ? 2
-      : whichNavLink == 'Knot Very Useful'
+      : whichNavLink == projectData[3].navLinkLabel
       ? 3
-      : whichNavLink == 'Picture Pad'
+      : whichNavLink == projectData[4].navLinkLabel
       ? 4
-      : whichNavLink == 'Eclipse Layout'
+      : whichNavLink == projectData[5].navLinkLabel
       ? 5
-      // : whichNavLink == 'More About Me'
-      // ? 6
       : 0;
   setFocusInfo(focusKey);
 }
 
+function setFocusInfo(focusKey) {
+  console.log('focusKey is ' + focusKey);
+
+  const focusProject =
+    focusKey === 0 ? projectData[0] :
+      focusKey === 1 ? projectData[1] :
+        focusKey === 2 ? projectData[2] :
+          focusKey === 3 ? projectData[3] :
+            focusKey === 4 ? projectData[4] :
+              focusKey === 5 ? projectData[5] :
+                projectData[0];
+
+  loadFocusInfo(focusProject);
+}
+
 // FUNCTION - load focus information that was set in setFocusInfo
-function loadFocusInfo() {
-  document.querySelector('#focus-heading').innerHTML = focusHeading;
-  document.querySelector('#focus-subheading').innerHTML = focusSubheading;
-  document.querySelector('#focus-para-1').innerHTML = focusPara1;
-  document.querySelector('#technologies').innerHTML = focusTechBadges;
-  document.querySelector('#focus-para-2').innerHTML = focusPara2;
-  document.querySelector('#focus-page-message').innerHTML = focusPageMessage;
-  document.querySelector('#focus-page').src = focusUrl; // #focusPage is the id of the iframe
+function loadFocusInfo(focusProject) {
+  document.querySelector('#focus-heading').innerHTML = focusProject.focusHeading;
+  document.querySelector('#focus-subheading').innerHTML = focusProject.focusSubheading;
+  document.querySelector('#focus-para-1').innerHTML = focusProject.focusPara1;
+  document.querySelector('#technologies').innerHTML = focusProject.focusTechBadges;
+  document.querySelector('#focus-para-2').innerHTML = focusProject.focusPara2;
+  document.querySelector('#focus-page-message').innerHTML = focusProject.focusPageMessage;
+  document.querySelector('#focus-page').src = focusProject.focusUrl; // #focusPage is the id of the iframe
   window.scrollTo(0, document.body.scrollHeight); // scrolls to bottom of the page
 }
 
@@ -201,17 +212,17 @@ function indexfromPanel(panelHover) {
 // FUNCTION - get array index from link target
 function indexfromLink(linkHover) {
   let index =
-    linkHover == 'LUPO'
+    linkHover == projectData[0].navLinkLabel
       ? 0
-      : linkHover == 'Farce Book'
+      : linkHover == projectData[1].navLinkLabel
       ? 1
-      : linkHover == 'Lair BnB'
+      : linkHover == projectData[2].navLinkLabel
       ? 2
-      : linkHover == 'Knot Very Useful'
+      : linkHover == projectData[3].navLinkLabel
       ? 3
-      : linkHover == 'Picture Pad'
+      : linkHover == projectData[4].navLinkLabel
       ? 4
-      : linkHover == 'Eclipse Layout'
+      : linkHover == projectData[5].navLinkLabel
       ? 5
       : linkHover == 'More About Me'
       ? 6
