@@ -27,11 +27,11 @@ There are various places througout the app that will need editing to swap one of
 
 ##### In index.html
 1. Navlink title (currently lines 29 to 34)
-2. App panel requires new image, title and description (e.g. app one is currently lines 61 to 69)
+2. App panel `list` element requires a new image, title and description (e.g. app one is currently lines 61 to 69)
 3. **If** changing the primary app (currently LUPO) you would need to change the default app section (currently lines 132 to 157)
 
 ##### In projectData.js
-ProjectData.js is a file containing an array of project data objects in the order that they appear. There should always be six uncommented objects.
+`ProjectData.js` is a file containing an array of project data objects in the order that they appear. There should always be six uncommented objects.
 Place the new data object int he correct place, i.e. if it is the thrid panal and third navlink, place it as the third object, index 2.
 Make sure you have all data fields included.
 
@@ -40,9 +40,13 @@ Make sure you have all data fields included.
 Just re-ordering the apps takes quite a bit of editing in this current format. This section will guide you through that process... at least where it needs doing.
 
 ##### In index.html
-1. Navlink titles (currently lines 29 to 34)
-2. App panel contains image, title and description (e.g. app one is currently lines 61 to 69)
+1. Navlink titles (currently lines 29 to 34). Re-order as required.
+2. App panel `list` element contains an image, title and description (e.g. app one is currently lines 61 to 69). Re-order to match navlinks.
+3. Within in each app panel `list` element, there is a `div` and a `span` element which have IDs of `panel-#-1` and `panel-#-2` respectively. These reference the order of the panels and need to run in consecutive order.
+Example: if the 3rd panel content is moved up into 2nd position the IDs `panel-3-1` amd `panel-3-1` will need to be changed to `panel-2-1` and `panel-2-1`, and the reverse done to the previously second panel that has been shfted into thrid place. **NOTE:** It is always the first number in the class that denotes panel order.
 
+##### In projectData.js
+Reorder the project objects as needed within the array to match changes made in `index.html`.
 
 ## Technologies Used
 
